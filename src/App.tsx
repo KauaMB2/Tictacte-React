@@ -73,7 +73,7 @@ function App() {
     if(amountOfAttempts.current===9 && isThereAWinner.current===false){
       const music = new Audio(new URL('./assets/songs/clickNotAllowed.wav', import.meta.url).href);
       await music.play()
-      alert("Ops,deu velha! Precione F5 para jogar outra partida.")
+      alert("Ops, deu velha! Precione F5 para jogar outra partida.")
       return
     }
     const target:HTMLElement=event.target as HTMLElement
@@ -177,11 +177,11 @@ function App() {
       isThereAWinner.current=true
       return
     }
-    if(amountOfAttempts.current===9 && isThereAWinner.current===false){
-      alert("Ops,deu velha! Precione F5 para jogar outra partida.")
-    }
     const music = new Audio(new URL('./assets/songs/click.wav', import.meta.url).href);
     await music.play()
+    if(amountOfAttempts.current===9 && isThereAWinner.current===false){
+      alert("Ops, deu velha! Precione F5 para jogar outra partida.")
+    }
   }
   return (
     <>

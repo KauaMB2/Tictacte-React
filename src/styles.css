@@ -1,44 +1,50 @@
+/* Reseta margens e preenchimentos */
 * {
   margin: 0;
   padding: 0;
 }
-html,
-body {
+
+html, body {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
 }
 
 .board-game {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  background-color: white;
+  width: 50vw; /* Define a largura da grade como 50% da largura da viewport */
+  height: 50vw; /* Define a altura da grade como 50% da largura da viewport */
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
-  grid-template-rows: 33.33% 33.33% 33.33%;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+  grid-template-rows: repeat(3, 1fr); /* 3 linhas iguais */
+  gap: 1px; /* Espaço entre células */
+  background-color: white;
 }
-.cell{
-  width: 100%;
-  padding: 0.2em;
-  color:#333;
+
+/* Estilo das células */
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
   font-size: 30px;
+  border: 1px solid #ccc; 
 }
-.cell:hover{
-  width: 90%;
+
+.cell:hover {
   background-color: #f6f6f6;
   cursor: pointer;
   border-radius: 5px;
 }
-.cellId{
+
+.cellId {
   position: absolute;
+  opacity: 0;
 }
-.cellImage{
-  position: relative;
-  width: 2em;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+
+.cellImage {
+  width: 50%; /* Ajusta a largura da imagem para 50% da célula */
+  height: auto; /* Mantém a proporção da imagem */
 }
