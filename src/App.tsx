@@ -189,7 +189,6 @@ function App() {
         {
           cells.map((cell, index)=>(
             <div onClick={handleCellClick} className='cell' id={index.toString()} key={index}>
-              <div className="cellId">{index}</div>
               {(cell.content==="X" || cell.content==="O") && (
                 <img
                   id='imageX'

@@ -39,11 +39,6 @@ html, body {
   border-radius: 5px;
 }
 
-.cellId {
-  position: absolute;
-  opacity: 0;
-}
-
 .cellImage {
   width: 50%; /* Ajusta a largura da imagem para 50% da célula */
   height: auto; /* Mantém a proporção da imagem */
