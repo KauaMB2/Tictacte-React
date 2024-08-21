@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-game {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+}
+.cell{
+  width: 100%;
+  padding: 0.2em;
+  color:#333;
+  font-size: 30px;
+}
+.cell:hover{
+  width: 90%;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.cellId{
+  position: absolute;
+}
+.cellImage{
+  position: relative;
+  width: 2em;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
